@@ -26,9 +26,9 @@ jobs:
   
       - name: Image Scanning
         env:
-          TMAS_API_KEY: ${{ secrets.TMAS_API_KEY }}
+          API_KEY_JR: ${{ secrets.API_KEY_JR }}
         run: |
-          ./tmas scan docker:workshop-container:latest -VMS --saveSBOM > results.json --override overrides.yml
+          ./tmas scan docker:nginx:latest -VMS --saveSBOM > results.json --override overrides.yml
   
       - name: Upload Json as Artifact
         uses: actions/upload-artifact@v3
