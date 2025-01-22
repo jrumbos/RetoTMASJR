@@ -28,7 +28,7 @@ jobs:
         env:
           API_KEY_JR: ${{ secrets.API_KEY_JR }}
         run: |
-          ./tmas scan docker:nginx:latest -VMS --saveSBOM > results.json --override overrides.yml
+          ./tmas scan docker:nginx:latest -VMS --saveSBOM > results.json
   
       - name: Upload Json as Artifact
         uses: actions/upload-artifact@v3
