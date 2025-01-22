@@ -26,7 +26,7 @@ jobs:
   
       - name: Image Scanning
         env:
-          API_KEY_JR: ${{ secrets.API_KEY_JR }}
+          TMAS_API_KEY: ${{ secrets.API_KEY_JR }}
         run: |
           ./tmas scan docker:nginx:latest -VMS --saveSBOM > results.json
   
