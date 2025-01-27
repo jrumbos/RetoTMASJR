@@ -9,3 +9,13 @@ vulnerabilities:
         name: libaom3
         version: 3.6.0-1+deb12u1
     reason: Dev dependency
+  # Override vulnerability findings whose CVE-ID is CVE-0000-0000
+  - rule:
+      vulnerability: CVE-2023-45853
+    reason: Not executed
+  # Override vulnerability findings detected on libcurl version 1.5.1
+  - rule:
+      package:
+        name: zlib1g
+        version: 1:1.2.13.dfsg-1
+    reason: Dev dependency
